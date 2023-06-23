@@ -171,7 +171,7 @@
     <string name="postListing_locked">Заблокировано</string>
     <string name="postListing_reply">Ответить на пост</string>
     <string name="post_activity_comments">Комментарии</string>
-    <string name="post_edit_body_placeholder">Тело</string>
+    <string name="post_edit_body_placeholder">Содержание</string>
     <string name="post_edit_close">Закрыть</string>
     <string name="post_edit_edit_post">Отредактировать пост</string>
     <string name="post_listing_block">Заблокировать %1$s</string>
@@ -315,5 +315,11 @@
     <string name="inbox_activity_mentions">Упоминания</string>
     <string name="inbox_activity_messages">Сообщения</string>
     <string name="bookmarks_activity_saved">Закладки</string>
-
+    <string name="voteToggle">Включить голосование</string>
+    <string name="title_required">Требуется заголовок</string>
+    <string name="title_must_be_3_chars"><![CDATA[Заголовок должен быть > 3 символов]]></string>
+    <string name="title_cannot_be_200_chars"><![CDATA[Заголовок должен быть < 200 символов]]></string>
+    <string name="title">Заголовок</string>
+    <string name="invalid_url">Неверная ссылка</string>
+    <string name="url">Ссылка</string>
 </resources>

@@ -316,4 +316,10 @@
     <string name="inbox_activity_mentions">Mentions</string>
     <string name="inbox_activity_messages">Messages</string>
     <string name="bookmarks_activity_saved">Saved</string>
+    <string name="title_required">Title required</string>
+    <string name="title_must_be_3_chars"><![CDATA[Title must be > 3 chars]]></string>
+    <string name="title_cannot_be_200_chars"><![CDATA[Title cannot be > 200 chars]]></string>
+    <string name="title">Title</string>
+    <string name="invalid_url">Invalid Url</string>
+    <string name="url">Url</string>
 </resources>

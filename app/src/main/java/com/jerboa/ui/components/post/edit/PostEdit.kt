@@ -16,6 +16,7 @@ import androidx.compose.material.icons.outlined.Save
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.TextFieldValue
@@ -92,8 +93,8 @@ fun EditPostBody(
     account: Account?,
     modifier: Modifier = Modifier,
 ) {
-    val nameField = validatePostName(name)
-    val urlField = validateUrl(url)
+    val nameField = validatePostName(name, LocalContext.current)
+    val urlField = validateUrl(url, LocalContext.current)
 
     val scrollState = rememberScrollState()
 

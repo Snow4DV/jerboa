@@ -29,6 +29,7 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.TextFieldValue
@@ -121,8 +122,8 @@ fun CreatePostBody(
     suggestedTitle: String?,
     suggestedTitleLoading: Boolean,
 ) {
-    val nameField = validatePostName(name)
-    val urlField = validateUrl(url)
+    val nameField = validatePostName(name, LocalContext.current)
+    val urlField = validateUrl(url, LocalContext.current)
 
     formValid(
         !nameField.hasError &&
@@ -186,7 +187,7 @@ fun CreatePostBody(
             outlined = true,
             account = account,
             focusImmediate = false,
-            placeholder = "Body",
+            placeholder = stringResource(R.string.post_edit_body_placeholder),
         )
         Box {
             community?.also {

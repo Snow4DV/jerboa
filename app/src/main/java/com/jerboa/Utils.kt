@@ -651,25 +651,26 @@ data class InputField(
 
 fun validatePostName(
     name: String,
+    context: Context,
 ): InputField {
     return if (name.isEmpty()) {
         InputField(
-            label = "Title required",
+            label = context.getString(R.string.title_required),
             hasError = true,
         )
     } else if (name.length < 3) {
         InputField(
-            label = "Title must be > 3 chars",
+            label = context.getString(R.string.title_must_be_3_chars),
             hasError = true,
         )
     } else if (name.length >= MAX_POST_TITLE_LENGTH) {
         InputField(
-            label = "Title cannot be > 200 chars",
+            label = context.getString(R.string.title_cannot_be_200_chars),
             hasError = true,
         )
     } else {
         InputField(
-            label = "Title",
+            label = context.getString(R.string.title),
             hasError = false,
         )
     }
@@ -677,15 +678,16 @@ fun validatePostName(
 
 fun validateUrl(
     url: String,
+    context: Context
 ): InputField {
     return if (url.isNotEmpty() && !PatternsCompat.WEB_URL.matcher(url).matches()) {
         InputField(
-            label = "Invalid Url",
+            label = context.getString(R.string.invalid_url),
             hasError = true,
         )
     } else {
         InputField(
-            label = "Url",
+            label = context.getString(R.string.url),
             hasError = false,
         )
     }
